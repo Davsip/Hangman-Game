@@ -6,39 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+   
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono" rel="stylesheet">
 </head>
 
 
-<body>
+            <body>
+            <!-- main header  -->
+                <div class="container">
+                    <div class="jumbotron text-center">
+                        <h1><kbd>HANGMAN 🧟‍!</kbd>
+                            <br>
+                            <small>Let's guess some cars 🚗!</small>
+                        </h1>
+                    </div>
+            
+                    <div class="row center-block match-my-cols">
+                        <div class="col-xs-12 col-md-8 text-center left">
+                            <h2 id="letsPlay">Press any key to get started!</h2>
+                            <h3>Current word:</h3>
+                            <div id="currentWord"></div>
+                            <br>
+                            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                            <h3>Letters Guessed:</h3>
+                                            <div id="lettersGuessed">--</div>
+                                        </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h3>Guesses Left:</h3>
+                                    <div id="guessesLeft">--</div>
+                                </div>	
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <h3>Number of Wins:</h3>
+                                    <div id="wins">0</div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <h3>Number of Losses:</h3>
+                                    <div id="losses">0</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-xs-12 col-md-4 right">
+                            <img class="center-block" src="./assets/images/Cars-Logo.png" alt="cute dog picture!" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
     
 
-
-
-
-<!-- <script>
-
-    // Array of cars 
-var cars = ["BMW", "Volvo", " Saab", " Ford", "Audi", "Opel", "Fiat", 
-"Renault", "Chevrolet", "Cadillac", "Ferrari", 
-"Toyota", " Subaru", "Pontiac", "Bugatti", "Porsche", "Mercedes Benz", 
-"Volkswagen", "Auto Union", "Alfa Romeo", " Tesla", "Ducati", "De Tomaso", 
-"Pagani", "Honda", " Datsun", "Suzuki", "Seat"]
-console.log(cars);
-
- for (i=0; 1<28; i++);
-console.log(i+1);
-
-</script> -->
-
-
-
-  
-  
-  
-  <script src="./assets/javascript/game.js">
-</script>
+  <script src="./assets/javascript/game.js"></script>
 
 </body>
 </html>
