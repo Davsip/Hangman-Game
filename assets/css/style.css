@@ -8,7 +8,7 @@ body{
 
 
 .jumbotron{
-	background-color: #EEE8AA;
+	background-color: #9FAF90;
 	color: #8b2121;
 	font-family: 'Roboto Mono', monospace;
 	margin-bottom: 1%;
@@ -41,7 +41,7 @@ img{
 }
 
 .left{
-	background-color:  #EEE8AA;
+	background-color:  #9FAF90;
 	border-radius: 6px;
 }
 
