@@ -30,17 +30,17 @@ function initialize() {
 	lettersGuessed = [];
 	correctGuesses = 0;
 	wordPlace = Math.floor(Math.random() * 28);
-	currentWord = cars[wordPlace];			//string
-	guessesLeft = 17 - currentWord.length;		//longer words get less guesses
-	wordAsDashes = makeIntoDashes(currentWord);	//string of dashes
-	wordAsArr = currentWord.split('');			//array with letters
-	dashesArray = wordAsDashes.split('');		//array with dashes
+	currentWord = cars[wordPlace];			
+	guessesLeft = 17 - currentWord.length;		
+	wordAsDashes = makeIntoDashes(currentWord);	
+	wordAsArr = currentWord.split('');			
+	dashesArray = wordAsDashes.split('');		
 	document.getElementById("currentWord").innerHTML = wordAsDashes;
 	document.getElementById("lettersGuessed").innerHTML = "--";
 	document.getElementById("guessesLeft").innerHTML = guessesLeft;
 }
 
-// Make each word into underscores, visually like hangman
+
 function makeIntoDashes(word) {
 	var dashes = "";
 	for (i = 0; i < word.length - 1; i++) {
@@ -50,11 +50,11 @@ function makeIntoDashes(word) {
 	return dashes;
 }
 
-// Main function that controls what to do with each keystroke
+
+
 function playGame(letter) {
 	var letter = letter.toLowerCase();
 
-	// Checks if key is a letter
 	if (alphabet.indexOf(letter) > -1) {
 		if (wordAsArr.indexOf(letter) > -1) {
 			correctGuesses++;
@@ -80,9 +80,8 @@ function playGame(letter) {
 	}
 }
 
-// Displays letter if it's in word
 function displayLetter(letter) {
-	// for each char in wordAsDashes, if matches currentWord --> display
+	
 	for (i = 0; i < currentWord.length; i++) {
 		if (letter == wordAsArr[i]) {
 			dashesArray[i * 2] = letter;
@@ -93,7 +92,7 @@ function displayLetter(letter) {
 	checkForWin();
 }
 
-// Checks for win by looking for "_"
+
 function checkForWin() {
 	if (dashesArray.indexOf("_") === -1) {
 		alert("You got it! The correct answer is " + currentWord);
